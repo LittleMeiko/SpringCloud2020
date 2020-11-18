@@ -13,4 +13,4 @@ eureka:
     fetechRegistry: true
     service-url:
       #将客户端注册进Eureka服务列表内
-      defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
