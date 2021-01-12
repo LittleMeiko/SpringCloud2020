@@ -1,0 +1,25 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center #注册进Eureka服务器的微服务名称
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/LittleMeiko/springcloud-config.git #Github上面的git仓库的名称
+          #搜索目录
+          search-paths:
+            - springcloud-config
+          force-pull: true
+          username: LittleMeiko
+          password: ysx199522
+        default-label: main
+      #读取分支
+
+#服务注册到的eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
